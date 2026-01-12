@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(){
 	
-	int r,c,i,j,min,n;
+	int r,c,i,j,min=10,n;
 	scanf("%d %d",&r,&c);
 	int arr[r][c];
 	
@@ -14,10 +14,10 @@ int main(){
 	
 	for(i=0;i<r;i++){
 		for(j=0;j<c;j++){
-			if(arr[i][j]<arr[i][j+1]){
-				min = arr[i][j];
+			if(min<arr[i][j]){
+				min = min;
 			}else{
-				min = arr[i][j+1];
+				min = arr[i][j];
 			}
 		}
 	}
